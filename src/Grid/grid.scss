@@ -1,0 +1,21 @@
+@import 'node_modules/foundation-sites/scss/util/util';
+@import 'node_modules/foundation-sites/scss/global';
+@import 'node_modules/foundation-sites/scss/grid/grid';
+@import '../breakpoints.json';
+
+$grid-column-gutter-small-up: 20px;
+$grid-column-gutter: $grid-column-gutter-small-up;
+
+$breakpoints: (
+  small: $bp-small,
+  medium: $bp-medium,
+  large: $bp-large,
+  xlarge: $bp-xlarge,
+  xxlarge: $bp-xxlarge
+);
+
+$breakpoint-classes: (small medium large xlarge xxlarge);
+$grid-row-width: $bp-xxlarge + $grid-column-gutter-small-up;
+$grid-column-align-edge: false;
+
+@include foundation-grid;
