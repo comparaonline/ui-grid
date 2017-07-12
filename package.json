@@ -5,8 +5,7 @@
   "main": "./dist/index.es.js",
   "scripts": {
     "build": "NODE_ENV=production rollup -c",
-    "build:watch": "rollup -c -w",
-    "storybook": "start-storybook -p 9100 -c .storybook"
+    "build:watch": "rollup -c -w"
   },
   "repository": {
     "type": "git",
@@ -36,11 +35,6 @@
     "style-loader": "^0.18.2"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.1.8",
-    "@storybook/addon-info": "^3.1.6",
-    "@storybook/addon-knobs": "^3.1.8",
-    "@storybook/addon-options": "^3.1.6",
-    "@storybook/react": "^3.1.8",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "cssnano": "^3.10.0",
     "postcss": "^6.0.6",
