@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import { Breakpoints, FloatTypes } from './enums';
 
 /**
@@ -21,16 +20,6 @@ export const GeneralPropTypes = {
   isClearfix: PropTypes.bool,
   float: PropTypes.oneOf(objectValues(FloatTypes))
 };
-
-/**
- * Creates class names from the given arguments.
- *
- * @param {*} args
- * @returns {string}
- */
-export function createClassName(...args) {
-  return classNames(...args);
-}
 
 /**
  * Parses the general class names from the given properties.
@@ -61,17 +50,6 @@ export function generalClassNames(props) {
     'float-center': props.float === FloatTypes.CENTER,
     'float-right': props.float === FloatTypes.RIGHT
   };
-}
-
-/**
- * Returns the keys for the given object.
- * This method is used for getting the keys for prop types.
- *
- * @param {Object} object
- * @returns {Array}
- */
-export function objectKeys(object) {
-  return Object.keys(object);
 }
 
 /**
