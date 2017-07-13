@@ -1,7 +1,7 @@
 {
-  "bp-small": "0",
-  "bp-medium": "200px",
-  "bp-large": "1024px",
-  "bp-xlarge": "1170px",
-  "bp-xxlarge": "1306px"
+  "small": "0",
+  "medium": "200px",
+  "large": "1024px",
+  "xlarge": "1170px",
+  "xxlarge": "1306px"
 }
