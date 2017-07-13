@@ -18,7 +18,8 @@ export default {
   format: 'es',
   sourceMap: true,
   external: [
-    'react'
+    'react',
+    'prop-types'
   ],
   plugins: [
     json(),
