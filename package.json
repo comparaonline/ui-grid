@@ -17,6 +17,10 @@
     "url": "https://github.com/comparaonline/ui-grid/issues"
   },
   "homepage": "https://github.com/comparaonline/ui-grid#readme",
+  "peerDependencies": {
+    "react": "^0.14.7",
+    "prop-types": "^15.5.10"
+  },
   "devDependencies": {
     "react": "^0.14.7",
     "prop-types": "^15.5.10",
