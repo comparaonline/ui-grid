@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { HorizontalAlignments, VerticalAlignments } from './enums';
-import { GeneralPropTypes, createClassName, generalClassNames, removeProps, objectKeys, isDefined } from './utils';
+import { GeneralPropTypes, generalClassNames, removeProps, isDefined } from './utils';
 
 /**
  * Row component.
@@ -10,7 +11,7 @@ import { GeneralPropTypes, createClassName, generalClassNames, removeProps, obje
  * @returns {Object}
  */
 export const Row = (props) => {
-  const className = createClassName(
+  const className = classNames(
     props.noDefaultClassName ? null : 'row',
     props.className,
     isDefined(props.upOnSmall) ? `small-up-${props.upOnSmall}` : null,
@@ -41,7 +42,7 @@ export const Row = (props) => {
     generalClassNames(props)
   );
 
-  const passProps = removeProps(props, objectKeys(Row.propTypes));
+  const passProps = removeProps(props, Object.keys(Row.propTypes));
 
   return <div {...passProps} className={className}/>;
 };
@@ -75,7 +76,7 @@ Row.propTypes = {
  */
 export const Column = (props) => {
   const defaultClassName = props.isColumn ? 'column' : 'columns';
-  const className = createClassName(
+  const className = classNames(
     props.noDefaultClassName ? null : defaultClassName,
     props.className,
     props.small ? `small-${props.small}` : null,
@@ -109,7 +110,7 @@ export const Column = (props) => {
     generalClassNames(props)
   );
 
-  const passProps = removeProps(props, objectKeys(Column.propTypes));
+  const passProps = removeProps(props, Object.keys(Column.propTypes));
 
   return <div {...passProps} className={className}/>;
 };

@@ -18,7 +18,8 @@ export default {
   format: 'es',
   sourceMap: true,
   external: [
-    'react'
+    'react',
+    'prop-types'
   ],
   plugins: [
     json(),
@@ -27,7 +28,7 @@ export default {
       options: {
         importer: jsonImporter
       },
-      output: resolve(__dirname, 'dist/index.es.css'),
+      output: resolve(__dirname, 'dist/index.css'),
     }),
     babel({
       exclude: 'node_modules/**',
