@@ -10,38 +10,3 @@ export const Breakpoints = {
   XLARGE: 'xlarge',
   XXLARGE: 'xxlarge'
 };
-
-/**
- * Horizontal alignment enumerable.
- *
- * @type {Object}
- */
-export const HorizontalAlignments = {
-  CENTER: 'center',
-  RIGHT: 'right',
-  JUSTIFY: 'justify',
-  SPACED: 'spaced'
-};
-
-/**
- * Vertical alignment enumerable.
- *
- * @type {Object}
- */
-export const VerticalAlignments = {
-  TOP: 'top',
-  MIDDLE: 'middle',
-  BOTTOM: 'bottom',
-  STRETCH: 'stretch'
-};
-
-/**
- * Float types enumerable.
- *
- * @type {{LEFT: string, CENTER: string, RIGHT: string}}
- */
-export const FloatTypes = {
-  LEFT: 'left',
-  CENTER: 'center',
-  RIGHT: 'right'
-};
