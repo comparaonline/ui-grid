@@ -1,29 +1,43 @@
+import PropTypes from 'prop-types';
+import breakpoints from '../breakpoints.json';
+
+const bps = Object.keys(breakpoints);
+export const bpPropClass = (bp, prop) => `${prop}On${bp.substr(0, 1).toUpperCase() + bp.substr(1)}`;
+
 /**
- * Removes properties from the given object.
- * This method is used for removing valid attributes from component props prior to rendering.
+ * Generate string with classnames from props names and breakpoints
  *
- * @param {Object} object
- * @param {Array} remove
+ * @param {Object} props
+ * @param {String Array} numericProps
+ * @param {String Array} booleanProps
+ * @param {Boolean} hasBreakpoint
+ * @returns {String}
+ */
+export const generateClassnames = (props, numericProps, booleanProps, hasBreakpoint = false) =>
+  bps.reduce((result, bp) => result.concat(
+    hasBreakpoint && props[bp] ? ` ${bp}-${props[bp]}` : '',
+    numericProps.reduce((names, prop) => {
+      const propValue = props[bpPropClass(bp, prop)];
+      return names.concat(propValue ? ` ${bp}-${prop}-${propValue}` : '');
+    }, ''),
+    booleanProps.reduce((names, prop) => names.concat(props[hasBreakpoint ? bpPropClass(bp, prop) : prop] ? ` ${hasBreakpoint ? `${bp}-` : ''}${prop}` : ''), ''),
+  ), '');
+
+/**
+ * Generate object with prop types from props names and breakpoints
+ *
+ * @param {String Array} numericProps
+ * @param {String Array} booleanProps
+ * @param {Boolean} hasBreakpoint
  * @returns {Object}
  */
-export function removeProps(object, remove) {
-  const result = {};
-
-  for (const property in object) {
-    if (object.hasOwnProperty(property) && remove.indexOf(property) === -1) {
-      result[property] = object[property];
-    }
-  }
-
-  return result;
-}
-
-/**
- * Returns whether or not the given value is defined.
- *
- * @param {*} value
- * @returns {boolean}
- */
-export function isDefined(value) {
-  return typeof value !== 'undefined';
-}
+export const generatePropTypes = (numericProps, booleanProps, hasBreakpoint = false) =>
+  bps.reduce((result, bp) => Object.assign(result, {
+    ...hasBreakpoint && { [bp]: PropTypes.number },
+    ...numericProps.reduce((names, prop) => Object.assign(names, {
+      [bpPropClass(bp, prop)]: PropTypes.number
+    }), {}),
+    ...booleanProps.reduce((names, prop) => Object.assign(names, {
+      [hasBreakpoint ? bpPropClass(bp, prop) : prop]: PropTypes.bool
+    }), {})
+  }), {});
