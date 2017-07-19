@@ -1,12 +1,17 @@
 import React from 'react';
-import { generateClassnames, generatePropTypes } from './utils';
+import { generateClassNames, generatePropTypes } from './utils';
 
-export const numericProps = ['up', 'collapse', 'uncollapse'];
-export const booleanProps = ['collapse', 'expanded'];
+export const propNames = {
+  breakpoints: {
+    include: false,
+    numeric: ['up', 'collapse', 'uncollapse']
+  },
+  boolean: ['collapse', 'expanded']
+};
 
 export const Row = (props) => {
-  const className = generateClassnames(props, numericProps, booleanProps);
+  const className = generateClassNames(props, propNames);
   return <div {...props} className={`row${className}`} />;
 };
 
-Row.propTypes = generatePropTypes(numericProps, booleanProps);
+Row.propTypes = generatePropTypes(propNames);
