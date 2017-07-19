@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Row, numericProps, booleanProps } from '../../Row';
+import { Row, propNames } from '../../Row';
 import { bpPropClass } from '../../utils';
 import breakpoints from '../../../breakpoints.json';
 import { expectClass } from '../helper';
@@ -14,7 +14,7 @@ describe('Row', () => {
 
   it('renders a row with numeric props', () => {
     Object.keys(breakpoints).forEach(bp => {
-      numericProps.forEach(prop => {
+      propNames.breakpoints.numeric.forEach(prop => {
         const row = shallow(<Row {...{ [bpPropClass(bp, prop)]: 1 }} />);
         expectClass(row, `${bp}-${prop}-1`);
       });
@@ -22,7 +22,7 @@ describe('Row', () => {
   });
 
   it('renders a row with boolean props', () => {
-    booleanProps.forEach(prop => {
+    propNames.boolean.forEach(prop => {
       const row = shallow(<Row {...{ [prop]: true }} />);
       expectClass(row, prop);
     });
