@@ -14,7 +14,7 @@
 * **collapseOn[Breakpoint]** : remove gutter
 * **uncollapseOn[Breakpoint]** : override collapseOn rules inherited from smaller sizes
 
-```
+```jsx
 <Row 
   expanded 
   collapsed
@@ -37,7 +37,7 @@
 * **centerOn[Breakpoint]** : center column
 * **uncenterOn[Breakpoint]** : override centerOn rules inherited from smaller sizes
 
-```
+```jsx
 <Row>
   <Column 
   	small={2} 
