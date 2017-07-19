@@ -81,12 +81,12 @@ ShallowWrapper {
   },
   "length": 1,
   "node": <div
-    className="row collapse collapse collapse collapse"
+    className="row collapse"
     collapse={true}
 />,
   "nodes": Array [
     <div
-      className="row collapse collapse collapse collapse"
+      className="row collapse"
       collapse={true}
 />,
   ],
@@ -129,12 +129,12 @@ ShallowWrapper {
       "_pendingStateQueue": null,
       "_renderedComponent": NoopInternalComponent {
         "_currentElement": <div
-          className="row collapse collapse collapse collapse"
+          className="row collapse"
           collapse={true}
 />,
         "_debugID": 28,
         "_renderedOutput": <div
-          className="row collapse collapse collapse collapse"
+          className="row collapse"
           collapse={true}
 />,
       },
@@ -163,12 +163,12 @@ ShallowWrapper {
   },
   "length": 1,
   "node": <div
-    className="row expanded expanded expanded expanded"
+    className="row expanded"
     expanded={true}
 />,
   "nodes": Array [
     <div
-      className="row expanded expanded expanded expanded"
+      className="row expanded"
       expanded={true}
 />,
   ],
@@ -211,12 +211,12 @@ ShallowWrapper {
       "_pendingStateQueue": null,
       "_renderedComponent": NoopInternalComponent {
         "_currentElement": <div
-          className="row expanded expanded expanded expanded"
+          className="row expanded"
           expanded={true}
 />,
         "_debugID": 30,
         "_renderedOutput": <div
-          className="row expanded expanded expanded expanded"
+          className="row expanded"
           expanded={true}
 />,
       },
