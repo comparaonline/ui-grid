@@ -1,10 +1,12 @@
-### Grid components
+# ui-grid
 
-* index.es.js bundle includes `Row`, `Column` and `breakpoints` definitions
-* index.css includes css classes required by Row and Column components
-* breakpoint.json file has screen breakpoints sizes
-* Row and Column components are based on [react-foundation](https://github.com/digiaonline/react-foundation) project
+* Row and Column components based on [react-foundation](https://github.com/digiaonline/react-foundation) project
+* Breakpoints json file included has screen breakpoints sizes
 
+## Installation
+```
+$ npm install --save @comparaonline/ui-grid
+````
 
 #### Row props:
 
@@ -15,8 +17,8 @@
 * **uncollapseOn[Breakpoint]** : override collapseOn rules inherited from smaller sizes
 
 ```jsx
-<Row 
-  expanded 
+<Row
+  expanded
   collapsed
   upOnSmall={1}
   upOnLarge={4}
@@ -39,16 +41,16 @@
 
 ```jsx
 <Row>
-  <Column 
-  	small={2} 
-    large={4} 
-    pushOnSmall={2} 
+  <Column
+    small={2}
+    large={4}
+    pushOnSmall={2}
     pullOnLarge={2}
   >
     Content
   </Column>
-  <Column 
-    small={2} 
+  <Column
+    small={2}
     offsetOnLarge={4}
     centerOnSmall
     uncenterOnLarge
@@ -60,6 +62,6 @@
 
 #### Breakpoints:
 * **small** : 0
-* **medium** : 200px
+* **medium** : 768px
 * **large** : 1024px
 * **xlarge** : 1170px
