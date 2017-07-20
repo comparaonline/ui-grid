@@ -1,0 +1,11 @@
+{
+  "syntax": "scss",
+  "extends": "@comparaonline/stylelint-config-css",
+  "rules": {
+    "declaration-empty-line-before": null,
+    "declaration-block-no-duplicate-properties": [
+      true,
+      { "ignoreProperties": ["undefined", "-styled-mixin", "display"] }
+    ]
+  }
+}

@@ -1,29 +1,74 @@
+import PropTypes from 'prop-types';
+import breakpoints from '../breakpoints.json';
+
+const bps = Object.keys(breakpoints);
+
+export const bpPropClass = (bp, prop) => `${prop}On${bp.substr(0, 1).toUpperCase() + bp.substr(1)}`;
+
+const getBooleanClassNames = (props, booleanProps) => booleanProps.reduce(
+  (names, prop) => names.concat(props[prop] ? ` ${prop}` : ''), '');
+
+const getBreakpointClassName = (props, bp) => (props[bp] ? ` ${bp}-${props[bp]}` : '');
+
+const getBreakpointNumericClassName = (props, numericProps, bp) => numericProps.reduce(
+  (names, prop) => {
+    const propValue = props[bpPropClass(bp, prop)];
+    return names.concat(propValue ? ` ${bp}-${prop}-${propValue}` : '');
+  }, '');
+
+const getBreakpointBooleanClassName = (props, booleanProps, bp) => booleanProps.reduce(
+  (names, prop) => names.concat(props[bpPropClass(bp, prop)] ? ` ${bp}-${prop}` : ''), '');
+
+const generateBreakpointClassNames = (props, propNames, bp) => ''.concat(
+  propNames.include ? getBreakpointClassName(props, bp) : '',
+  propNames.numeric ? getBreakpointNumericClassName(props, propNames.numeric, bp) : '',
+  propNames.boolean ? getBreakpointBooleanClassName(props, propNames.boolean, bp) : ''
+);
+
 /**
- * Removes properties from the given object.
- * This method is used for removing valid attributes from component props prior to rendering.
+ * Generate string with classnames from props names and breakpoints
  *
- * @param {Object} object
- * @param {Array} remove
+ * @param {Object} props
+ * @param {String Array} numericProps
+ * @param {String Array} booleanProps
+ * @param {Boolean} hasBreakpoint
+ * @returns {String}
+ */
+export const generateClassNames = (props, propNames) => ''.concat(
+  propNames.boolean ? getBooleanClassNames(props, propNames.boolean) : '',
+  propNames.breakpoints ?
+    bps.reduce((className, bp) => className.concat(
+      generateBreakpointClassNames(props, propNames.breakpoints, bp)
+    ), '') : ''
+);
+
+const getBooleanTypes = booleanProps => booleanProps.reduce(
+  (result, prop) => Object.assign(result, { [prop]: PropTypes.bool }), {});
+
+const getBreakpointType = bp => ({ [bp]: PropTypes.number });
+
+const getBreakpointGenericType = (props, bp, type) => props.reduce(
+  (result, prop) => Object.assign(result, { [bpPropClass(bp, prop)]: type }), {});
+
+const generateBreakpointTypes = (propNames, bp) => Object.assign(
+  propNames.include ? getBreakpointType(bp) : {},
+  propNames.numeric ? getBreakpointGenericType(propNames.numeric, bp, PropTypes.number) : {},
+  propNames.boolean ? getBreakpointGenericType(propNames.boolean, bp, PropTypes.bool) : {}
+);
+
+/**
+ * Generate object with prop types from props names and breakpoints
+ *
+ * @param {String Array} numericProps
+ * @param {String Array} booleanProps
+ * @param {Boolean} hasBreakpoint
  * @returns {Object}
  */
-export function removeProps(object, remove) {
-  const result = {};
-
-  for (const property in object) {
-    if (object.hasOwnProperty(property) && remove.indexOf(property) === -1) {
-      result[property] = object[property];
-    }
-  }
-
-  return result;
-}
-
-/**
- * Returns whether or not the given value is defined.
- *
- * @param {*} value
- * @returns {boolean}
- */
-export function isDefined(value) {
-  return typeof value !== 'undefined';
-}
+export const generatePropTypes = (propNames) =>
+  Object.assign(
+    propNames.boolean ? getBooleanTypes(propNames.boolean) : {},
+    bps.reduce((result, bp) => Object.assign(
+      result,
+      generateBreakpointTypes(propNames.breakpoints, bp)
+    ), {})
+  );
