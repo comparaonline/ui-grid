@@ -1,11 +1,11 @@
-## ui-grid
+# ui-grid
 
 * Row and Column components based on [react-foundation](https://github.com/digiaonline/react-foundation) project
 * Breakpoints json file included has screen breakpoints sizes
 
 ## Installation
 ```
-$ npm install --save comparaonline/ui-grid
+$ npm install --save @comparaonline/ui-grid
 ````
 
 #### Row props:
