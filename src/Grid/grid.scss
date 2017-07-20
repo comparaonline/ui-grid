@@ -3,19 +3,20 @@
 @import 'node_modules/foundation-sites/scss/grid/grid';
 @import '../breakpoints.json';
 
+$block-grid-max: 8;
+$grid-column-alias: false;
+$grid-column-align-edge: false;
 $grid-column-gutter-small-up: 20px;
 $grid-column-gutter: $grid-column-gutter-small-up;
 
 $breakpoints: (
-  small: $bp-small,
-  medium: $bp-medium,
-  large: $bp-large,
-  xlarge: $bp-xlarge,
-  xxlarge: $bp-xxlarge
+  small: $small,
+  medium: $medium,
+  large: $large,
+  xlarge: $xlarge
 );
 
-$breakpoint-classes: (small medium large xlarge xxlarge);
-$grid-row-width: $bp-xxlarge + $grid-column-gutter-small-up;
-$grid-column-align-edge: false;
+$breakpoint-classes: map-keys($breakpoints);
+$grid-row-width: $xlarge + $grid-column-gutter-small-up;
 
 @include foundation-grid;

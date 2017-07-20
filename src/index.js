@@ -1,4 +1,6 @@
-import styles from './Grid/grid.scss';
+import './Grid/grid.scss';
 import breakpoints from './breakpoints.json';
-export { Row, Column } from './Grid/grid.js';
+
+export { Row } from './Grid/Row.js';
+export { Column } from './Grid/Column.js';
 export { breakpoints };
