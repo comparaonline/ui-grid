@@ -22,6 +22,7 @@ $grid-row-width: $xlarge + $grid-column-gutter-small-up;
 
 @include foundation-grid;
 
-.row, .column {
+.row,
+.column {
   box-sizing: border-box;
 }
