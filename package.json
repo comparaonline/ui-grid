@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "",
   "main": "./dist/index.es.js",
+  "module": "dist/index.es.js",
   "scripts": {
     "pretest": "yarn run lint",
     "test": "jest --config jest.config.json",
