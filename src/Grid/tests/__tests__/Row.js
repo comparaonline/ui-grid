@@ -27,4 +27,13 @@ describe('Row', () => {
       expectClass(row, prop);
     });
   });
+
+  it('renders a row with breakpoints boolean props', () => {
+    Object.keys(breakpoints).forEach(bp => {
+      propNames.breakpoints.boolean.forEach(prop => {
+        const row = shallow(<Row {...{ [bpPropClass(bp, prop)]: true }} />);
+        expectClass(row, `${bp}-${prop}`);
+      });
+    });
+  });
 });

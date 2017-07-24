@@ -18,6 +18,54 @@ exports[`Row renders a row with boolean props 2`] = `
 />
 `;
 
+exports[`Row renders a row with breakpoints boolean props 1`] = `
+<div
+  className="row small-collapse"
+/>
+`;
+
+exports[`Row renders a row with breakpoints boolean props 2`] = `
+<div
+  className="row small-uncollapse"
+/>
+`;
+
+exports[`Row renders a row with breakpoints boolean props 3`] = `
+<div
+  className="row medium-collapse"
+/>
+`;
+
+exports[`Row renders a row with breakpoints boolean props 4`] = `
+<div
+  className="row medium-uncollapse"
+/>
+`;
+
+exports[`Row renders a row with breakpoints boolean props 5`] = `
+<div
+  className="row large-collapse"
+/>
+`;
+
+exports[`Row renders a row with breakpoints boolean props 6`] = `
+<div
+  className="row large-uncollapse"
+/>
+`;
+
+exports[`Row renders a row with breakpoints boolean props 7`] = `
+<div
+  className="row xlarge-collapse"
+/>
+`;
+
+exports[`Row renders a row with breakpoints boolean props 8`] = `
+<div
+  className="row xlarge-uncollapse"
+/>
+`;
+
 exports[`Row renders a row with numeric props 1`] = `
 <div
   className="row small-up-1"
@@ -26,66 +74,18 @@ exports[`Row renders a row with numeric props 1`] = `
 
 exports[`Row renders a row with numeric props 2`] = `
 <div
-  className="row small-collapse-1"
+  className="row medium-up-1"
 />
 `;
 
 exports[`Row renders a row with numeric props 3`] = `
 <div
-  className="row small-uncollapse-1"
+  className="row large-up-1"
 />
 `;
 
 exports[`Row renders a row with numeric props 4`] = `
 <div
-  className="row medium-up-1"
-/>
-`;
-
-exports[`Row renders a row with numeric props 5`] = `
-<div
-  className="row medium-collapse-1"
-/>
-`;
-
-exports[`Row renders a row with numeric props 6`] = `
-<div
-  className="row medium-uncollapse-1"
-/>
-`;
-
-exports[`Row renders a row with numeric props 7`] = `
-<div
-  className="row large-up-1"
-/>
-`;
-
-exports[`Row renders a row with numeric props 8`] = `
-<div
-  className="row large-collapse-1"
-/>
-`;
-
-exports[`Row renders a row with numeric props 9`] = `
-<div
-  className="row large-uncollapse-1"
-/>
-`;
-
-exports[`Row renders a row with numeric props 10`] = `
-<div
   className="row xlarge-up-1"
-/>
-`;
-
-exports[`Row renders a row with numeric props 11`] = `
-<div
-  className="row xlarge-collapse-1"
-/>
-`;
-
-exports[`Row renders a row with numeric props 12`] = `
-<div
-  className="row xlarge-uncollapse-1"
 />
 `;
