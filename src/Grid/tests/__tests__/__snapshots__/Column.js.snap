@@ -8,7 +8,6 @@ exports[`Column renders a column 1`] = `
 
 exports[`Column renders a column with boolean props 1`] = `
 <div
-  centeredOnSmall={true}
   className="column small-centered"
 />
 `;
@@ -16,13 +15,11 @@ exports[`Column renders a column with boolean props 1`] = `
 exports[`Column renders a column with boolean props 2`] = `
 <div
   className="column small-uncentered"
-  uncenteredOnSmall={true}
 />
 `;
 
 exports[`Column renders a column with boolean props 3`] = `
 <div
-  centeredOnMedium={true}
   className="column medium-centered"
 />
 `;
@@ -30,13 +27,11 @@ exports[`Column renders a column with boolean props 3`] = `
 exports[`Column renders a column with boolean props 4`] = `
 <div
   className="column medium-uncentered"
-  uncenteredOnMedium={true}
 />
 `;
 
 exports[`Column renders a column with boolean props 5`] = `
 <div
-  centeredOnLarge={true}
   className="column large-centered"
 />
 `;
@@ -44,13 +39,11 @@ exports[`Column renders a column with boolean props 5`] = `
 exports[`Column renders a column with boolean props 6`] = `
 <div
   className="column large-uncentered"
-  uncenteredOnLarge={true}
 />
 `;
 
 exports[`Column renders a column with boolean props 7`] = `
 <div
-  centeredOnXlarge={true}
   className="column xlarge-centered"
 />
 `;
@@ -58,118 +51,101 @@ exports[`Column renders a column with boolean props 7`] = `
 exports[`Column renders a column with boolean props 8`] = `
 <div
   className="column xlarge-uncentered"
-  uncenteredOnXlarge={true}
 />
 `;
 
 exports[`Column renders a column with breakpoints 1`] = `
 <div
   className="column small-1"
-  small={1}
 />
 `;
 
 exports[`Column renders a column with breakpoints 2`] = `
 <div
   className="column medium-1"
-  medium={1}
 />
 `;
 
 exports[`Column renders a column with breakpoints 3`] = `
 <div
   className="column large-1"
-  large={1}
 />
 `;
 
 exports[`Column renders a column with breakpoints 4`] = `
 <div
   className="column xlarge-1"
-  xlarge={1}
 />
 `;
 
 exports[`Column renders a column with numeric props 1`] = `
 <div
   className="column small-pull-1"
-  pullOnSmall={1}
 />
 `;
 
 exports[`Column renders a column with numeric props 2`] = `
 <div
   className="column small-push-1"
-  pushOnSmall={1}
 />
 `;
 
 exports[`Column renders a column with numeric props 3`] = `
 <div
   className="column small-offset-1"
-  offsetOnSmall={1}
 />
 `;
 
 exports[`Column renders a column with numeric props 4`] = `
 <div
   className="column medium-pull-1"
-  pullOnMedium={1}
 />
 `;
 
 exports[`Column renders a column with numeric props 5`] = `
 <div
   className="column medium-push-1"
-  pushOnMedium={1}
 />
 `;
 
 exports[`Column renders a column with numeric props 6`] = `
 <div
   className="column medium-offset-1"
-  offsetOnMedium={1}
 />
 `;
 
 exports[`Column renders a column with numeric props 7`] = `
 <div
   className="column large-pull-1"
-  pullOnLarge={1}
 />
 `;
 
 exports[`Column renders a column with numeric props 8`] = `
 <div
   className="column large-push-1"
-  pushOnLarge={1}
 />
 `;
 
 exports[`Column renders a column with numeric props 9`] = `
 <div
   className="column large-offset-1"
-  offsetOnLarge={1}
 />
 `;
 
 exports[`Column renders a column with numeric props 10`] = `
 <div
   className="column xlarge-pull-1"
-  pullOnXlarge={1}
 />
 `;
 
 exports[`Column renders a column with numeric props 11`] = `
 <div
   className="column xlarge-push-1"
-  pushOnXlarge={1}
 />
 `;
 
 exports[`Column renders a column with numeric props 12`] = `
 <div
   className="column xlarge-offset-1"
-  offsetOnXlarge={1}
 />
 `;

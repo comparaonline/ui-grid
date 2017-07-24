@@ -11,7 +11,7 @@ export const propNames = {
 
 export const Column = (props) => {
   const className = generateClassNames(props, propNames);
-  return <div {...props} className={`column${className}`} />;
+  return <div className={`column${className}`}>{props.children}</div>;
 };
 
 Column.propTypes = generatePropTypes(propNames);
