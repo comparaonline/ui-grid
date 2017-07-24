@@ -4,7 +4,8 @@ import { generateClassNames, generatePropTypes } from './utils';
 export const propNames = {
   breakpoints: {
     include: false,
-    numeric: ['up', 'collapse', 'uncollapse']
+    numeric: ['up'],
+    boolean: ['collapse', 'uncollapse']
   },
   boolean: ['collapse', 'expanded']
 };
