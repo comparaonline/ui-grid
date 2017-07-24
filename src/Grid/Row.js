@@ -11,7 +11,7 @@ export const propNames = {
 
 export const Row = (props) => {
   const className = generateClassNames(props, propNames);
-  return <div {...props} className={`row${className}`} />;
+  return <div className={`row${className}`}>{props.children}</div>;
 };
 
 Row.propTypes = generatePropTypes(propNames);
