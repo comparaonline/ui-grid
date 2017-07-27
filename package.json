@@ -27,8 +27,8 @@
   },
   "homepage": "https://github.com/comparaonline/ui-grid#readme",
   "peerDependencies": {
-    "react": "^15.5.4",
-    "prop-types": "^15.5.10"
+    "prop-types": "^15.5.10",
+    "react": "^15.5.4"
   },
   "devDependencies": {
     "@comparaonline/eslint-config-react": "^1.0.3",
@@ -72,5 +72,8 @@
     "style-loader": "^0.18.2",
     "stylelint": "^7.11.0",
     "uglify-es": "^3.0.24"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5"
   }
 }
