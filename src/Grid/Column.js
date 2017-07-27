@@ -10,7 +10,7 @@ export const propNames = {
   }
 };
 
-export const Column = (props) => {
+const Column = (props) => {
   const className = cx(
     props.className,
     `column${generateClassNames(props, propNames)}`
@@ -22,3 +22,5 @@ export const Column = (props) => {
 };
 
 Column.propTypes = generatePropTypes(propNames);
+
+export default Column;

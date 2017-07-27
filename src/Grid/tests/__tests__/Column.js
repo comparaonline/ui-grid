@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Column, propNames } from '../../Column';
+import Column, { propNames } from '../../Column';
 import { bpPropClass } from '../../utils';
 import breakpoints from '../../../breakpoints.json';
 import { expectClass } from '../helper';
