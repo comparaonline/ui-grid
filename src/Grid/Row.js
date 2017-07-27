@@ -1,4 +1,5 @@
 import React from 'react';
+import cx from 'classnames';
 import { generateClassNames, generatePropTypes } from './utils';
 
 export const propNames = {
@@ -11,8 +12,16 @@ export const propNames = {
 };
 
 export const Row = (props) => {
-  const className = generateClassNames(props, propNames);
-  return <div className={`row${className}`}>{props.children}</div>;
+  const className = cx(
+    `row${generateClassNames(props, propNames)}`,
+    props.className
+  );
+
+  return (
+    <div className={className}>
+      {props.children}
+    </div>
+  );
 };
 
 Row.propTypes = generatePropTypes(propNames);

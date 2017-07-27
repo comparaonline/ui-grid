@@ -38,4 +38,13 @@ describe('Column', () => {
       });
     });
   });
+
+  describe('when an additional className is pass as prop', () => {
+    const className = 'test-class';
+    const wrapper = shallow(<Column className={className} />);
+
+    it('add this className', () => {
+      expect(wrapper.is(`.${className}`)).toBeTruthy();
+    });
+  });
 });
