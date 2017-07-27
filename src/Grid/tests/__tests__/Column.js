@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Column, propNames } from '../../Column';
+import Column, { propNames } from '../../Column';
 import { bpPropClass } from '../../utils';
 import breakpoints from '../../../breakpoints.json';
 import { expectClass } from '../helper';
@@ -36,6 +36,15 @@ describe('Column', () => {
         const column = shallow(<Column {...{ [bpPropClass(bp, prop)]: true }} />);
         expectClass(column, `${bp}-${prop}`);
       });
+    });
+  });
+
+  describe('when an additional className is pass as prop', () => {
+    const className = 'test-class';
+    const wrapper = shallow(<Column className={className} />);
+
+    it('add this className', () => {
+      expect(wrapper.is(`.${className}`)).toBeTruthy();
     });
   });
 });
