@@ -14,6 +14,7 @@ export const propNames = {
 const Row = (props) => {
   const className = cx(
     `row${generateClassNames(props, propNames)}`,
+    { 'flex-row': props.equalHeightColumns },
     props.className
   );
 
