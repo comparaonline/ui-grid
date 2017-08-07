@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { Row } from '../Row';
-import { Column } from '../Column';
+import Row from '../Row';
+import Column from '../Column';
 import '../grid.scss';
 import './helper.scss';
 
