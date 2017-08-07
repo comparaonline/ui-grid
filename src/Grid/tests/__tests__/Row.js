@@ -37,6 +37,10 @@ describe('Row', () => {
     });
   });
 
+  it('renders a row with equal height columns', () => {
+    const row = shallow(<Row equalHeightColumns />);
+    expectClass(row, 'flex-row');
+  });
 
   describe('when an additional className is pass as prop', () => {
     const className = 'test-class';

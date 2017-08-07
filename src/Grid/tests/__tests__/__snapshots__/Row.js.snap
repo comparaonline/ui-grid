@@ -66,6 +66,12 @@ exports[`Row renders a row with breakpoints boolean props 8`] = `
 />
 `;
 
+exports[`Row renders a row with equal height columns 1`] = `
+<div
+  className="row flex-row"
+/>
+`;
+
 exports[`Row renders a row with numeric props 1`] = `
 <div
   className="row small-up-1"
