@@ -15,6 +15,7 @@ $ npm install --save @comparaonline/ui-grid
 * **upOn[Breakpoint]** : equally-sized column
 * **collapseOn[Breakpoint]** : remove gutter
 * **uncollapseOn[Breakpoint]** : override collapseOn rules inherited from smaller sizes
+* **equalHeightColumns** : column height is equal to max column height
 
 ```jsx
 <Row
