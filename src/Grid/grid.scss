@@ -26,3 +26,12 @@ $grid-row-width: $xlarge + $grid-column-gutter-small-up;
 .column {
   box-sizing: border-box;
 }
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+
+  .column {
+    display: flex;
+  }
+}
