@@ -53,8 +53,8 @@ $ npm install --save @comparaonline/ui-grid
   <Column
     small={2}
     offsetOnLarge={4}
-    centerOnSmall
-    uncenterOnLarge
+    centeredOnSmall
+    uncenteredOnLarge
   >
     Content
   </Column>
