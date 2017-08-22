@@ -61,6 +61,11 @@ $ npm install --save @comparaonline/ui-grid
 </Row>
 ```
 
+#### Visibility props:
+
+* **showOn[Breakpoint]** : show for breakpoint and upper breakpoints
+* **hideOn[Breakpoint]** : hide for breakpoint and upper breakpoints
+
 #### Breakpoints:
 * **small** : 0
 * **medium** : 768px
