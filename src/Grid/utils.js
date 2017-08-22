@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import breakpoints from '../breakpoints.json';
 
 const bps = Object.keys(breakpoints);
-const bpCamelCase = bp => `${bp.substr(0, 1).toUpperCase()}${bp.substr(1)}`;
+const toCamelCase = bp => `${bp.substr(0, 1).toUpperCase()}${bp.substr(1)}`;
 
-export const bpPropClass = (bp, prop) => `${prop}On${bpCamelCase(bp)}`;
+export const getBreakpointPropName = (bp, prop) => `${prop}On${toCamelCase(bp)}`;
 
 const getBooleanClassNames = (props, booleanProps) => booleanProps.reduce(
   (names, prop) => names.concat(props[prop] ? ` ${prop}` : ''), '');
@@ -13,15 +13,15 @@ const getBreakpointClassName = (props, bp) => (props[bp] ? ` ${bp}-${props[bp]}`
 
 const getBreakpointNumericClassName = (props, numericProps, bp) => numericProps.reduce(
   (names, prop) => {
-    const propValue = props[bpPropClass(bp, prop)];
+    const propValue = props[getBreakpointPropName(bp, prop)];
     return names.concat(propValue ? ` ${bp}-${prop}-${propValue}` : '');
   }, '');
 
 const getBreakpointBooleanClassName = (props, booleanProps, bp) => booleanProps.reduce(
-  (names, prop) => names.concat(props[bpPropClass(bp, prop)] ? ` ${bp}-${prop}` : ''), '');
+  (names, prop) => names.concat(props[getBreakpointPropName(bp, prop)] ? ` ${bp}-${prop}` : ''), '');
 
 const getBreakpointVisibilityClassName = (props, booleanProps, bp) => booleanProps.reduce(
-  (names, prop) => names.concat(props[bpPropClass(bp, prop)] ? ` ${prop}-for-${bp}` : ''), '');
+  (names, prop) => names.concat(props[getBreakpointPropName(bp, prop)] ? ` ${prop}-for-${bp}` : ''), '');
 
 const generateBreakpointClassNames = (props, propNames, bp) => ''.concat(
   propNames.include ? getBreakpointClassName(props, bp) : '',
@@ -53,7 +53,7 @@ const getBooleanTypes = booleanProps => booleanProps.reduce(
 const getBreakpointType = bp => ({ [bp]: PropTypes.number });
 
 const getBreakpointGenericType = (props, bp, type) => props.reduce(
-  (result, prop) => Object.assign(result, { [bpPropClass(bp, prop)]: type }), {});
+  (result, prop) => Object.assign(result, { [getBreakpointPropName(bp, prop)]: type }), {});
 
 const generateBreakpointTypes = (propNames, bp) => Object.assign(
   propNames.include ? getBreakpointType(bp) : {},
