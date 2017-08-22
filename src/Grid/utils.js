@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import breakpoints from '../breakpoints.json';
 
 const bps = Object.keys(breakpoints);
-const bpCamelCase = bp => `${bp.substr(0, 1).toUpperCase() + bp.substr(1)}`;
+const bpCamelCase = bp => `${bp.substr(0, 1).toUpperCase()}${bp.substr(1)}`;
 
 export const bpPropClass = (bp, prop) => `${prop}On${bpCamelCase(bp)}`;
 
