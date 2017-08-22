@@ -2,8 +2,9 @@ import PropTypes from 'prop-types';
 import breakpoints from '../breakpoints.json';
 
 const bps = Object.keys(breakpoints);
+const bpCamelCase = bp => `${bp.substr(0, 1).toUpperCase() + bp.substr(1)}`;
 
-export const bpPropClass = (bp, prop) => `${prop}On${bp.substr(0, 1).toUpperCase() + bp.substr(1)}`;
+export const bpPropClass = (bp, prop) => `${prop}On${bpCamelCase(bp)}`;
 
 const getBooleanClassNames = (props, booleanProps) => booleanProps.reduce(
   (names, prop) => names.concat(props[prop] ? ` ${prop}` : ''), '');
@@ -19,10 +20,14 @@ const getBreakpointNumericClassName = (props, numericProps, bp) => numericProps.
 const getBreakpointBooleanClassName = (props, booleanProps, bp) => booleanProps.reduce(
   (names, prop) => names.concat(props[bpPropClass(bp, prop)] ? ` ${bp}-${prop}` : ''), '');
 
+const getBreakpointVisibilityClassName = (props, booleanProps, bp) => booleanProps.reduce(
+  (names, prop) => names.concat(props[bpPropClass(bp, prop)] ? ` ${prop}-for-${bp}` : ''), '');
+
 const generateBreakpointClassNames = (props, propNames, bp) => ''.concat(
   propNames.include ? getBreakpointClassName(props, bp) : '',
   propNames.numeric ? getBreakpointNumericClassName(props, propNames.numeric, bp) : '',
-  propNames.boolean ? getBreakpointBooleanClassName(props, propNames.boolean, bp) : ''
+  propNames.boolean ? getBreakpointBooleanClassName(props, propNames.boolean, bp) : '',
+  propNames.visibility ? getBreakpointVisibilityClassName(props, propNames.visibility, bp) : ''
 );
 
 /**
@@ -53,7 +58,8 @@ const getBreakpointGenericType = (props, bp, type) => props.reduce(
 const generateBreakpointTypes = (propNames, bp) => Object.assign(
   propNames.include ? getBreakpointType(bp) : {},
   propNames.numeric ? getBreakpointGenericType(propNames.numeric, bp, PropTypes.number) : {},
-  propNames.boolean ? getBreakpointGenericType(propNames.boolean, bp, PropTypes.bool) : {}
+  propNames.boolean ? getBreakpointGenericType(propNames.boolean, bp, PropTypes.bool) : {},
+  propNames.visibility ? getBreakpointGenericType(propNames.visibility, bp, PropTypes.bool) : {}
 );
 
 /**
