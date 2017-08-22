@@ -39,6 +39,15 @@ describe('Column', () => {
     });
   });
 
+  it('renders a row with visibility props', () => {
+    Object.keys(breakpoints).forEach(bp => {
+      propNames.breakpoints.visibility.forEach(prop => {
+        const row = shallow(<Column {...{ [bpPropClass(bp, prop)]: true }} />);
+        expectClass(row, `${prop}-for-${bp}`);
+      });
+    });
+  });
+
   describe('when an additional className is pass as prop', () => {
     const className = 'test-class';
     const wrapper = shallow(<Column className={className} />);

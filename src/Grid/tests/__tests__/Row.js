@@ -37,6 +37,15 @@ describe('Row', () => {
     });
   });
 
+  it('renders a row with visibility props', () => {
+    Object.keys(breakpoints).forEach(bp => {
+      propNames.breakpoints.visibility.forEach(prop => {
+        const row = shallow(<Row {...{ [bpPropClass(bp, prop)]: true }} />);
+        expectClass(row, `${prop}-for-${bp}`);
+      });
+    });
+  });
+
   it('renders a row with equal height columns', () => {
     const row = shallow(<Row equalHeightColumns />);
     expectClass(row, 'flex-row');
