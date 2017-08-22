@@ -95,3 +95,51 @@ exports[`Row renders a row with numeric props 4`] = `
   className="row xlarge-up-1"
 />
 `;
+
+exports[`Row renders a row with visibility props 1`] = `
+<div
+  className="row hide-for-small"
+/>
+`;
+
+exports[`Row renders a row with visibility props 2`] = `
+<div
+  className="row show-for-small"
+/>
+`;
+
+exports[`Row renders a row with visibility props 3`] = `
+<div
+  className="row hide-for-medium"
+/>
+`;
+
+exports[`Row renders a row with visibility props 4`] = `
+<div
+  className="row show-for-medium"
+/>
+`;
+
+exports[`Row renders a row with visibility props 5`] = `
+<div
+  className="row hide-for-large"
+/>
+`;
+
+exports[`Row renders a row with visibility props 6`] = `
+<div
+  className="row show-for-large"
+/>
+`;
+
+exports[`Row renders a row with visibility props 7`] = `
+<div
+  className="row hide-for-xlarge"
+/>
+`;
+
+exports[`Row renders a row with visibility props 8`] = `
+<div
+  className="row show-for-xlarge"
+/>
+`;

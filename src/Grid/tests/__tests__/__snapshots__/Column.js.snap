@@ -149,3 +149,51 @@ exports[`Column renders a column with numeric props 12`] = `
   className="column xlarge-offset-1"
 />
 `;
+
+exports[`Column renders a row with visibility props 1`] = `
+<div
+  className="column hide-for-small"
+/>
+`;
+
+exports[`Column renders a row with visibility props 2`] = `
+<div
+  className="column show-for-small"
+/>
+`;
+
+exports[`Column renders a row with visibility props 3`] = `
+<div
+  className="column hide-for-medium"
+/>
+`;
+
+exports[`Column renders a row with visibility props 4`] = `
+<div
+  className="column show-for-medium"
+/>
+`;
+
+exports[`Column renders a row with visibility props 5`] = `
+<div
+  className="column hide-for-large"
+/>
+`;
+
+exports[`Column renders a row with visibility props 6`] = `
+<div
+  className="column show-for-large"
+/>
+`;
+
+exports[`Column renders a row with visibility props 7`] = `
+<div
+  className="column hide-for-xlarge"
+/>
+`;
+
+exports[`Column renders a row with visibility props 8`] = `
+<div
+  className="column show-for-xlarge"
+/>
+`;
