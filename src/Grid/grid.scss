@@ -1,6 +1,7 @@
 @import 'node_modules/foundation-sites/scss/util/util';
 @import 'node_modules/foundation-sites/scss/global';
 @import 'node_modules/foundation-sites/scss/grid/grid';
+@import 'node_modules/foundation-sites/scss/components/visibility';
 @import '../breakpoints.json';
 
 $block-grid-max: 8;
@@ -33,5 +34,17 @@ $grid-row-width: $xlarge + $grid-column-gutter-small-up;
 
   .column {
     display: flex;
+  }
+}
+
+@each $size in $breakpoint-classes {
+  @if $size != $-zf-zero-breakpoint {
+    .hide-for-#{$size} {
+      @include hide-for($size);
+    }
+
+    .show-for-#{$size} {
+      @include show-for($size);
+    }
   }
 }

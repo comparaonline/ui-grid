@@ -6,7 +6,8 @@ export const propNames = {
   breakpoints: {
     include: false,
     numeric: ['up'],
-    boolean: ['collapse', 'uncollapse']
+    boolean: ['collapse', 'uncollapse'],
+    visibility: ['hide', 'show']
   },
   boolean: ['collapse', 'expanded']
 };

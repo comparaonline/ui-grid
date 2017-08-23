@@ -6,7 +6,8 @@ export const propNames = {
   breakpoints: {
     include: true,
     numeric: ['pull', 'push', 'offset'],
-    boolean: ['centered', 'uncentered']
+    boolean: ['centered', 'uncentered'],
+    visibility: ['hide', 'show']
   }
 };
 
