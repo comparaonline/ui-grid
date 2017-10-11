@@ -7,8 +7,8 @@ import json from 'rollup-plugin-json';
 import sass from 'rollup-plugin-sass';
 import uglify from 'rollup-plugin-uglify';
 import { minify } from 'uglify-es';
-import postcss from 'postcss'
-import cssnano from 'cssnano';
+import postcss from 'postcss';
+import csso from 'postcss-csso';
 
 const jsonImporter = require('node-sass-json-importer');
 
@@ -24,11 +24,14 @@ export default {
   plugins: [
     json(),
     sass({
-      processor: css => postcss([cssnano]).process(css).then(result => result.css),
+      processor: css =>
+        postcss([csso])
+          .process(css)
+          .then(result => result.css),
       options: {
         importer: jsonImporter
       },
-      output: resolve(__dirname, 'dist/index.css'),
+      output: resolve(__dirname, 'dist/index.css')
     }),
     babel({
       exclude: 'node_modules/**',
