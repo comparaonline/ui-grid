@@ -2,13 +2,17 @@
   "name": "@comparaonline/ui-grid",
   "version": "1.2.0",
   "description": "Grid componontes based on the Foundation's float grid",
+  "engines": {
+    "node": ">=6.11.3 <6.12",
+    "yarn": "~1.1.0"
+  },
   "main": "./dist/index.es.js",
   "module": "dist/index.es.js",
   "scripts": {
-    "pretest": "yarn run lint",
+    "pretest": "yarn lint",
     "test": "jest --config jest.config.json",
-    "test:watch": "yarn run test -- --watch",
-    "test:update-snapshots": "yarn run test -- --u",
+    "test:watch": "yarn test --watch",
+    "test:update-snapshots": "yarn test --u",
     "lint:js": "eslint 'src/**/*.js'",
     "lint:styles": "stylelint 'src/**/*.scss'",
     "lint": "run-p lint:styles lint:js",
