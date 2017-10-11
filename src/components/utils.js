@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import breakpoints from '../breakpoints.json';
+import breakpoints from '../config/breakpoints.json';
 
 const bps = Object.keys(breakpoints);
 const toCamelCase = bp => `${bp.substr(0, 1).toUpperCase()}${bp.substr(1)}`;
