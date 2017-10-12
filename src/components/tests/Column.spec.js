@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Column, { propNames } from '../../Column';
-import { getBreakpointPropName } from '../../utils';
-import breakpoints from '../../../breakpoints.json';
-import { expectClass } from '../helper';
+import { expectClass } from './helpers';
+import Column, { propNames } from '../Column';
+import { getBreakpointPropName } from '../utils';
+import breakpoints from '../../config/breakpoints.json';
 
 const bps = Object.keys(breakpoints);
 
