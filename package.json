@@ -6,7 +6,7 @@
     "node": ">=6.11.3 <6.12",
     "yarn": "~1.1.0"
   },
-  "main": "./dist/index.es.js",
+  "main": "./dist/index.js",
   "module": "dist/index.es.js",
   "scripts": {
     "pretest": "yarn lint",
@@ -17,8 +17,10 @@
     "lint:styles": "stylelint 'src/**/*.scss'",
     "lint": "run-p lint:styles lint:js",
     "build": "NODE_ENV=production rollup -c",
+    "build:es": "EXPORT_MODE=es yarn build",
+    "build:all": "run-p build build:es",
     "build:watch": "rollup -c -w",
-    "prepublish": "yarn build",
+    "prepublish": "yarn build:all",
     "storybook": "start-storybook -p 9100 -c .storybook"
   },
   "repository": {
