@@ -12,10 +12,13 @@ import csso from 'postcss-csso';
 
 const jsonImporter = require('node-sass-json-importer');
 
+const exportMode = process.env.EXPORT_MODE || 'cjs';
+const fileExtension = exportMode === 'es' ? 'es.js' : 'js';
+
 export default {
   entry: resolve(__dirname, 'src/index.js'),
-  dest: resolve(__dirname, 'dist/index.es.js'),
-  format: 'es',
+  dest: resolve(__dirname, `dist/index.${fileExtension}`),
+  format: exportMode,
   sourceMap: true,
   external: [
     'react',
