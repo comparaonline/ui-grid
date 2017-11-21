@@ -8,7 +8,6 @@ import sass from 'rollup-plugin-sass';
 import uglify from 'rollup-plugin-uglify';
 import { minify } from 'uglify-es';
 import postcss from 'postcss';
-import csso from 'postcss-csso';
 
 const jsonImporter = require('node-sass-json-importer');
 
@@ -28,7 +27,7 @@ export default {
     json(),
     sass({
       processor: css =>
-        postcss([csso])
+        postcss()
           .process(css)
           .then(result => result.css),
       options: {
