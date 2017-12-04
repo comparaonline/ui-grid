@@ -2,6 +2,7 @@ const fs = require('fs');
 const postcss = require('postcss');
 const csso = require('postcss-csso');
 const remove = require('postcss-remove-rules');
+const autprefixer = require('autoprefixer');
 
 const source = 'dist/index.css';
 const cssFile = fs.readFileSync(source, 'utf8');
@@ -22,6 +23,7 @@ const withoutBlockGrid = postcss()
       '.column-block > :last-child': '*'
     })
   }))
+  .use(autprefixer)
   .use(csso)
   .process(cssFile);
 
