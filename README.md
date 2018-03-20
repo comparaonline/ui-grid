@@ -82,12 +82,14 @@ Example:
 
 The breakpoints values are exported as a literal object with the following properties:
 
-| name   | size   |
-|:-------|:-------|
-| small  | 0px    |
-| medium | 768px  |
-| large  | 1024px |
-| xlarge | 1170px |
+|  name   |  size  |
+|:--------|:-------|
+| xsmall  | 0px    |
+| small   | 480px  |
+| medium  | 600px  |
+| large   | 840px  |
+| xlarge  | 960px  |
+| xxlarge | 1280px |
 
 To access to this values, simply import them:
 
@@ -108,7 +110,7 @@ The current output is:
 ```js
 {
   gutters: {
-    default: "20px"
+    default: "16px"
   }
 }
 ```

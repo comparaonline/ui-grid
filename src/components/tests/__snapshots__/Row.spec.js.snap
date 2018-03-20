@@ -20,49 +20,73 @@ exports[`Row renders a row with boolean props 2`] = `
 
 exports[`Row renders a row with breakpoints boolean props 1`] = `
 <div
-  className="row small-collapse"
+  className="row xsmall-collapse"
 />
 `;
 
 exports[`Row renders a row with breakpoints boolean props 2`] = `
 <div
-  className="row small-uncollapse"
+  className="row xsmall-uncollapse"
 />
 `;
 
 exports[`Row renders a row with breakpoints boolean props 3`] = `
 <div
-  className="row medium-collapse"
+  className="row small-collapse"
 />
 `;
 
 exports[`Row renders a row with breakpoints boolean props 4`] = `
 <div
-  className="row medium-uncollapse"
+  className="row small-uncollapse"
 />
 `;
 
 exports[`Row renders a row with breakpoints boolean props 5`] = `
 <div
-  className="row large-collapse"
+  className="row medium-collapse"
 />
 `;
 
 exports[`Row renders a row with breakpoints boolean props 6`] = `
 <div
-  className="row large-uncollapse"
+  className="row medium-uncollapse"
 />
 `;
 
 exports[`Row renders a row with breakpoints boolean props 7`] = `
 <div
-  className="row xlarge-collapse"
+  className="row large-collapse"
 />
 `;
 
 exports[`Row renders a row with breakpoints boolean props 8`] = `
 <div
+  className="row large-uncollapse"
+/>
+`;
+
+exports[`Row renders a row with breakpoints boolean props 9`] = `
+<div
+  className="row xlarge-collapse"
+/>
+`;
+
+exports[`Row renders a row with breakpoints boolean props 10`] = `
+<div
   className="row xlarge-uncollapse"
+/>
+`;
+
+exports[`Row renders a row with breakpoints boolean props 11`] = `
+<div
+  className="row xxlarge-collapse"
+/>
+`;
+
+exports[`Row renders a row with breakpoints boolean props 12`] = `
+<div
+  className="row xxlarge-uncollapse"
 />
 `;
 
@@ -74,72 +98,108 @@ exports[`Row renders a row with equal height columns 1`] = `
 
 exports[`Row renders a row with numeric props 1`] = `
 <div
-  className="row small-up-1"
+  className="row xsmall-up-1"
 />
 `;
 
 exports[`Row renders a row with numeric props 2`] = `
 <div
-  className="row medium-up-1"
+  className="row small-up-1"
 />
 `;
 
 exports[`Row renders a row with numeric props 3`] = `
 <div
-  className="row large-up-1"
+  className="row medium-up-1"
 />
 `;
 
 exports[`Row renders a row with numeric props 4`] = `
 <div
+  className="row large-up-1"
+/>
+`;
+
+exports[`Row renders a row with numeric props 5`] = `
+<div
   className="row xlarge-up-1"
+/>
+`;
+
+exports[`Row renders a row with numeric props 6`] = `
+<div
+  className="row xxlarge-up-1"
 />
 `;
 
 exports[`Row renders a row with visibility props 1`] = `
 <div
-  className="row hide-for-small"
+  className="row hide-for-xsmall"
 />
 `;
 
 exports[`Row renders a row with visibility props 2`] = `
 <div
-  className="row show-for-small"
+  className="row show-for-xsmall"
 />
 `;
 
 exports[`Row renders a row with visibility props 3`] = `
 <div
-  className="row hide-for-medium"
+  className="row hide-for-small"
 />
 `;
 
 exports[`Row renders a row with visibility props 4`] = `
 <div
-  className="row show-for-medium"
+  className="row show-for-small"
 />
 `;
 
 exports[`Row renders a row with visibility props 5`] = `
 <div
-  className="row hide-for-large"
+  className="row hide-for-medium"
 />
 `;
 
 exports[`Row renders a row with visibility props 6`] = `
 <div
-  className="row show-for-large"
+  className="row show-for-medium"
 />
 `;
 
 exports[`Row renders a row with visibility props 7`] = `
 <div
-  className="row hide-for-xlarge"
+  className="row hide-for-large"
 />
 `;
 
 exports[`Row renders a row with visibility props 8`] = `
 <div
+  className="row show-for-large"
+/>
+`;
+
+exports[`Row renders a row with visibility props 9`] = `
+<div
+  className="row hide-for-xlarge"
+/>
+`;
+
+exports[`Row renders a row with visibility props 10`] = `
+<div
   className="row show-for-xlarge"
+/>
+`;
+
+exports[`Row renders a row with visibility props 11`] = `
+<div
+  className="row hide-for-xxlarge"
+/>
+`;
+
+exports[`Row renders a row with visibility props 12`] = `
+<div
+  className="row show-for-xxlarge"
 />
 `;

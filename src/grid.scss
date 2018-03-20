@@ -11,14 +11,16 @@ $grid-column-align-edge: false;
 $grid-column-gutter: map-get($gutters, 'default');
 
 $breakpoints: (
+  xsmall: $xsmall,
   small: $small,
   medium: $medium,
   large: $large,
-  xlarge: $xlarge
+  xlarge: $xxlarge
 );
 
+$-zf-zero-breakpoint: xsmall;
 $breakpoint-classes: map-keys($breakpoints);
-$grid-row-width: $xlarge + $grid-column-gutter;
+$grid-row-width: $xxlarge + $grid-column-gutter;
 
 .row,
 .column {
