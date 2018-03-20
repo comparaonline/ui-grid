@@ -8,192 +8,288 @@ exports[`Column renders a column 1`] = `
 
 exports[`Column renders a column with boolean props 1`] = `
 <div
-  className="column small-centered"
+  className="column xsmall-centered"
 />
 `;
 
 exports[`Column renders a column with boolean props 2`] = `
 <div
-  className="column small-uncentered"
+  className="column xsmall-uncentered"
 />
 `;
 
 exports[`Column renders a column with boolean props 3`] = `
 <div
-  className="column medium-centered"
+  className="column small-centered"
 />
 `;
 
 exports[`Column renders a column with boolean props 4`] = `
 <div
-  className="column medium-uncentered"
+  className="column small-uncentered"
 />
 `;
 
 exports[`Column renders a column with boolean props 5`] = `
 <div
-  className="column large-centered"
+  className="column medium-centered"
 />
 `;
 
 exports[`Column renders a column with boolean props 6`] = `
 <div
-  className="column large-uncentered"
+  className="column medium-uncentered"
 />
 `;
 
 exports[`Column renders a column with boolean props 7`] = `
 <div
-  className="column xlarge-centered"
+  className="column large-centered"
 />
 `;
 
 exports[`Column renders a column with boolean props 8`] = `
 <div
+  className="column large-uncentered"
+/>
+`;
+
+exports[`Column renders a column with boolean props 9`] = `
+<div
+  className="column xlarge-centered"
+/>
+`;
+
+exports[`Column renders a column with boolean props 10`] = `
+<div
   className="column xlarge-uncentered"
+/>
+`;
+
+exports[`Column renders a column with boolean props 11`] = `
+<div
+  className="column xxlarge-centered"
+/>
+`;
+
+exports[`Column renders a column with boolean props 12`] = `
+<div
+  className="column xxlarge-uncentered"
 />
 `;
 
 exports[`Column renders a column with breakpoints 1`] = `
 <div
-  className="column small-1"
+  className="column xsmall-1"
 />
 `;
 
 exports[`Column renders a column with breakpoints 2`] = `
 <div
-  className="column medium-1"
+  className="column small-1"
 />
 `;
 
 exports[`Column renders a column with breakpoints 3`] = `
 <div
-  className="column large-1"
+  className="column medium-1"
 />
 `;
 
 exports[`Column renders a column with breakpoints 4`] = `
 <div
+  className="column large-1"
+/>
+`;
+
+exports[`Column renders a column with breakpoints 5`] = `
+<div
   className="column xlarge-1"
+/>
+`;
+
+exports[`Column renders a column with breakpoints 6`] = `
+<div
+  className="column xxlarge-1"
 />
 `;
 
 exports[`Column renders a column with numeric props 1`] = `
 <div
-  className="column small-pull-1"
+  className="column xsmall-pull-1"
 />
 `;
 
 exports[`Column renders a column with numeric props 2`] = `
 <div
-  className="column small-push-1"
+  className="column xsmall-push-1"
 />
 `;
 
 exports[`Column renders a column with numeric props 3`] = `
 <div
-  className="column small-offset-1"
+  className="column xsmall-offset-1"
 />
 `;
 
 exports[`Column renders a column with numeric props 4`] = `
 <div
-  className="column medium-pull-1"
+  className="column small-pull-1"
 />
 `;
 
 exports[`Column renders a column with numeric props 5`] = `
 <div
-  className="column medium-push-1"
+  className="column small-push-1"
 />
 `;
 
 exports[`Column renders a column with numeric props 6`] = `
 <div
-  className="column medium-offset-1"
+  className="column small-offset-1"
 />
 `;
 
 exports[`Column renders a column with numeric props 7`] = `
 <div
-  className="column large-pull-1"
+  className="column medium-pull-1"
 />
 `;
 
 exports[`Column renders a column with numeric props 8`] = `
 <div
-  className="column large-push-1"
+  className="column medium-push-1"
 />
 `;
 
 exports[`Column renders a column with numeric props 9`] = `
 <div
-  className="column large-offset-1"
+  className="column medium-offset-1"
 />
 `;
 
 exports[`Column renders a column with numeric props 10`] = `
 <div
-  className="column xlarge-pull-1"
+  className="column large-pull-1"
 />
 `;
 
 exports[`Column renders a column with numeric props 11`] = `
 <div
-  className="column xlarge-push-1"
+  className="column large-push-1"
 />
 `;
 
 exports[`Column renders a column with numeric props 12`] = `
 <div
+  className="column large-offset-1"
+/>
+`;
+
+exports[`Column renders a column with numeric props 13`] = `
+<div
+  className="column xlarge-pull-1"
+/>
+`;
+
+exports[`Column renders a column with numeric props 14`] = `
+<div
+  className="column xlarge-push-1"
+/>
+`;
+
+exports[`Column renders a column with numeric props 15`] = `
+<div
   className="column xlarge-offset-1"
+/>
+`;
+
+exports[`Column renders a column with numeric props 16`] = `
+<div
+  className="column xxlarge-pull-1"
+/>
+`;
+
+exports[`Column renders a column with numeric props 17`] = `
+<div
+  className="column xxlarge-push-1"
+/>
+`;
+
+exports[`Column renders a column with numeric props 18`] = `
+<div
+  className="column xxlarge-offset-1"
 />
 `;
 
 exports[`Column renders a row with visibility props 1`] = `
 <div
-  className="column hide-for-small"
+  className="column hide-for-xsmall"
 />
 `;
 
 exports[`Column renders a row with visibility props 2`] = `
 <div
-  className="column show-for-small"
+  className="column show-for-xsmall"
 />
 `;
 
 exports[`Column renders a row with visibility props 3`] = `
 <div
-  className="column hide-for-medium"
+  className="column hide-for-small"
 />
 `;
 
 exports[`Column renders a row with visibility props 4`] = `
 <div
-  className="column show-for-medium"
+  className="column show-for-small"
 />
 `;
 
 exports[`Column renders a row with visibility props 5`] = `
 <div
-  className="column hide-for-large"
+  className="column hide-for-medium"
 />
 `;
 
 exports[`Column renders a row with visibility props 6`] = `
 <div
-  className="column show-for-large"
+  className="column show-for-medium"
 />
 `;
 
 exports[`Column renders a row with visibility props 7`] = `
 <div
-  className="column hide-for-xlarge"
+  className="column hide-for-large"
 />
 `;
 
 exports[`Column renders a row with visibility props 8`] = `
 <div
+  className="column show-for-large"
+/>
+`;
+
+exports[`Column renders a row with visibility props 9`] = `
+<div
+  className="column hide-for-xlarge"
+/>
+`;
+
+exports[`Column renders a row with visibility props 10`] = `
+<div
   className="column show-for-xlarge"
+/>
+`;
+
+exports[`Column renders a row with visibility props 11`] = `
+<div
+  className="column hide-for-xxlarge"
+/>
+`;
+
+exports[`Column renders a row with visibility props 12`] = `
+<div
+  className="column show-for-xxlarge"
 />
 `;
