@@ -12,10 +12,13 @@ export const propNames = {
   boolean: ['collapse', 'expanded']
 };
 
-const Row = (props) => {
+const Row = props => {
   const className = cx(
     `row${generateClassNames(props, propNames)}`,
-    { 'flex-row': props.equalHeightColumns },
+    {
+      'flex-row': props.equalHeightColumns,
+      'v-gutters': props.addVerticalGutters
+    },
     props.className
   );
 
@@ -27,5 +30,9 @@ const Row = (props) => {
 };
 
 Row.propTypes = generatePropTypes(propNames);
+Row.defaultProps = {
+  equalHeightColumns: false,
+  addVerticalGutters: false
+};
 
 export default Row;
