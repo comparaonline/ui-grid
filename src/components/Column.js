@@ -11,15 +11,13 @@ export const propNames = {
   }
 };
 
-const Column = (props) => {
+const Column = props => {
   const className = cx(
     props.className,
     `column${generateClassNames(props, propNames)}`
   );
 
-  return (
-    <div className={className}>{props.children}</div>
-  );
+  return <div className={className}>{props.children}</div>;
 };
 
 Column.propTypes = generatePropTypes(propNames);

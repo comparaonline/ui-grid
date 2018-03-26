@@ -19,10 +19,7 @@ export default {
   dest: resolve(__dirname, `dist/index.${fileExtension}`),
   format: exportMode,
   sourceMap: true,
-  external: [
-    'react',
-    'prop-types'
-  ],
+  external: ['react', 'prop-types'],
   plugins: [
     json(),
     sass({
@@ -48,7 +45,9 @@ export default {
       include: 'node_modules/**'
     }),
     replace({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+      'process.env.NODE_ENV': JSON.stringify(
+        process.env.NODE_ENV || 'development'
+      )
     }),
     uglify({}, minify)
   ]

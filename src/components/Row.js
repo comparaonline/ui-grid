@@ -22,11 +22,7 @@ const Row = props => {
     props.className
   );
 
-  return (
-    <div className={className}>
-      {props.children}
-    </div>
-  );
+  return <div className={className}>{props.children}</div>;
 };
 
 Row.propTypes = generatePropTypes(propNames);
