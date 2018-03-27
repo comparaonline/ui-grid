@@ -1,9 +1,10 @@
 {
   "name": "@comparaonline/ui-grid",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Grid components based on the Foundation's float grid",
   "main": "./dist/index.js",
   "module": "dist/index.es.js",
+  "types": "typings/ui-grid.d.ts",
   "scripts": {
     "pretest": "yarn lint",
     "test": "jest --config jest.config.json",
@@ -41,6 +42,7 @@
     "@storybook/addon-knobs": "^3.1.9",
     "@storybook/addon-options": "^3.1.6",
     "@storybook/react": "^3.1.9",
+    "@types/react": "^16.0.41",
     "autoprefixer": "^7.2.1",
     "babel-core": "^6.25.0",
     "babel-plugin-external-helpers": "^6.22.0",

@@ -49,4 +49,16 @@ $grid-row-width: $xxlarge + $grid-column-gutter;
   }
 }
 
+$vertical-gutter: rem-calc($grid-column-gutter / 2);
+
+.v-gutters {
+  margin-top: -$vertical-gutter;
+  margin-bottom: -$vertical-gutter;
+
+  .column {
+    padding-top: $vertical-gutter;
+    padding-bottom: $vertical-gutter;
+  }
+}
+
 @include foundation-grid;
