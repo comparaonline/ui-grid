@@ -6,6 +6,7 @@
   "module": "dist/index.es.js",
   "types": "typings/ui-grid.d.ts",
   "scripts": {
+    "precommit": "lint-staged",
     "pretest": "yarn lint",
     "test": "jest --config jest.config.json",
     "test:watch": "yarn test --watch",
@@ -19,6 +20,10 @@
     "build:watch": "rollup -c -w",
     "prepublish": "yarn build:all",
     "storybook": "start-storybook -p 9100 -c .storybook"
+  },
+  "lint-staged": {
+    "*.{css,md,json}": ["prettier --write", "git add"],
+    "*.{js}": ["eslint --fix", "git add"]
   },
   "repository": {
     "type": "git",
@@ -52,14 +57,20 @@
     "enzyme": "^2.9.1",
     "enzyme-to-json": "^1.5.1",
     "eslint": "~3.19",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
     "foundation-sites": "^6.4.1",
+    "husky": "^0.14.3",
     "jest": "^20.0.4",
+    "lint-staged": "^7.0.0",
     "node-sass": "^4.5.3",
     "node-sass-json-importer": "^3.0.2",
     "npm-run-all": "^4.0.2",
     "postcss": "^6.0.6",
     "postcss-csso": "^2.0.0",
     "postcss-remove-rules": "^1.0.0",
+    "prettier": "1.11.1",
+    "prettier-eslint": "^8.8.1",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
