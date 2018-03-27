@@ -27,7 +27,7 @@ The known props for `Row` are:
 | expanded                 | Sets width to 100%                                                           | `false`       |
 | collapseOn[breakpoint]   | Removes the gutters on the given breakpoint                                  | `undefined`   |
 | uncollapseOn[breakpoint] | Overrides `collapseOn` rules inherited from smaller sizes                    | `undefined`   |
-| equalHeightColumns       | Sets all the columns height to the max column height (requires flex support) |               |
+| equalHeightColumns       | Sets all the columns height to the max column height (requires flex support) | `false`       |
 | addVerticalGutters       | Adds vertical gutters to all the children columns                            | `false`       |
 
 ### Column
