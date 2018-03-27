@@ -1,5 +1,7 @@
 # @comparaonline/ui-grid
 
+[![npm version](https://badge.fury.io/js/%40comparaonline%2Fui-grid.svg)](https://badge.fury.io/js/%40comparaonline%2Fui-grid)
+
 * Row and Column components based on [react-foundation](https://github.com/digiaonline/react-foundation) project
 * Breakpoints json file included has screen breakpoints sizes
 
