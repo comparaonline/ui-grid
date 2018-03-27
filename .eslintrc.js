@@ -5,5 +5,8 @@ module.exports = {
     browser: true,
     node: true,
     jest: true
+  },
+  rules: {
+    'no-confusing-arrow': 0
   }
 };
