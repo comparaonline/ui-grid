@@ -29,6 +29,9 @@
   "bugs": {
     "url": "https://github.com/comparaonline/ui-grid/issues"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "homepage": "https://github.com/comparaonline/ui-grid#readme",
   "peerDependencies": {
     "prop-types": "^15.5.10 || ^16",
