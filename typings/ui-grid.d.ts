@@ -1,5 +1,19 @@
 import * as React from 'react';
 
+type VisibilityProps = {
+  showOnSmall?: boolean;
+  showOnMedium?: boolean;
+  showOnLarge?: boolean;
+  showOnXlarge?: boolean;
+  showOnXxlarge?: boolean;
+
+  hideOnSmall?: boolean;
+  hideOnMedium?: boolean;
+  hideOnLarge?: boolean;
+  hideOnXlarge?: boolean;
+  hideOnXxlarge?: boolean;
+};
+
 type RowProps = {
   collapse?: boolean;
   expanded?: boolean;
@@ -57,5 +71,5 @@ type ColumnProps = {
   uncenterOnXxlarge?: boolean;
 };
 
-export class Row extends React.Component<RowProps> {}
-export class Column extends React.Component<ColumnProps> {}
+export class Row extends React.Component<RowProps | VisibilityProps> {}
+export class Column extends React.Component<ColumnProps | VisibilityProps> {}
