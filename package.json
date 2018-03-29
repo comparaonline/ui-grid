@@ -1,6 +1,6 @@
 {
   "name": "@comparaonline/ui-grid",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Grid components based on the Foundation's float grid",
   "main": "./dist/index.js",
   "module": "dist/index.es.js",
