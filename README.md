@@ -1,5 +1,6 @@
 # @comparaonline/ui-grid
 
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![npm version](https://badge.fury.io/js/%40comparaonline%2Fui-grid.svg)](https://badge.fury.io/js/%40comparaonline%2Fui-grid)
 
 * Row and Column components based on [react-foundation](https://github.com/digiaonline/react-foundation) project

@@ -15,7 +15,9 @@ describe('Row', () => {
   it('renders a row with numeric props', () => {
     Object.keys(breakpoints).forEach(bp => {
       propNames.breakpoints.numeric.forEach(prop => {
-        const row = shallow(<Row {...{ [getBreakpointPropName(bp, prop)]: 1 }} />);
+        const row = shallow(
+          <Row {...{ [getBreakpointPropName(bp, prop)]: 1 }} />
+        );
         expectClass(row, `${bp}-${prop}-1`);
       });
     });
@@ -31,7 +33,9 @@ describe('Row', () => {
   it('renders a row with breakpoints boolean props', () => {
     Object.keys(breakpoints).forEach(bp => {
       propNames.breakpoints.boolean.forEach(prop => {
-        const row = shallow(<Row {...{ [getBreakpointPropName(bp, prop)]: true }} />);
+        const row = shallow(
+          <Row {...{ [getBreakpointPropName(bp, prop)]: true }} />
+        );
         expectClass(row, `${bp}-${prop}`);
       });
     });
@@ -40,7 +44,9 @@ describe('Row', () => {
   it('renders a row with visibility props', () => {
     Object.keys(breakpoints).forEach(bp => {
       propNames.breakpoints.visibility.forEach(prop => {
-        const row = shallow(<Row {...{ [getBreakpointPropName(bp, prop)]: true }} />);
+        const row = shallow(
+          <Row {...{ [getBreakpointPropName(bp, prop)]: true }} />
+        );
         expectClass(row, `${prop}-for-${bp}`);
       });
     });
