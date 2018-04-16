@@ -41,14 +41,14 @@ import { Column } from '@comparaonline/ui-grid';
 
 The known props for `Column` are:
 
-| name                                            | description                                             | default value |
-| :---------------------------------------------- | :------------------------------------------------------ | :------------ |
-| `small`, `medium`, `large`, `xlarge`, `xxlarge` | Sets the column size per breakpoint                     | `small=12`    |
-| offsetOn[breakpoint]                            | Moves block to right according to offset,               | `undefined`   |
-| pushOn[breakpoint]                              | Right shift column                                      | `undefined`   |
-| pullOn[breakpoint]                              | Left shift column                                       | `undefined`   |
-| centerOn[breakpoint]                            | Centers the column on the given breakpoint              | `undefined`   |
-| uncenterOn[Breakpoint]                          | Overrides `centerOn` rules inherited from smaller sizes | `undefined`   |
+| name                                            | description                                               | default value |
+| :---------------------------------------------- | :-------------------------------------------------------- | :------------ |
+| `small`, `medium`, `large`, `xlarge`, `xxlarge` | Sets the column size per breakpoint                       | `small=12`    |
+| offsetOn[breakpoint]                            | Moves block to right according to offset,                 | `undefined`   |
+| pushOn[breakpoint]                              | Right shift column                                        | `undefined`   |
+| pullOn[breakpoint]                              | Left shift column                                         | `undefined`   |
+| centeredOn[breakpoint]                          | Centers the column on the given breakpoint                | `undefined`   |
+| uncenteredOn[breakpoint]                        | Overrides `centeredOn` rules inherited from smaller sizes | `undefined`   |
 
 Example:
 
