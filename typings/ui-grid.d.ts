@@ -58,17 +58,17 @@ type ColumnProps = {
   pullOnXlarge?: boolean;
   pullOnXxlarge?: boolean;
 
-  centerOnSmall?: boolean;
-  centerOnMedium?: boolean;
-  centerOnLarge?: boolean;
-  centerOnXlarge?: boolean;
-  centerOnXxlarge?: boolean;
+  centeredOnSmall?: boolean;
+  centeredOnMedium?: boolean;
+  centeredOnLarge?: boolean;
+  centeredOnXlarge?: boolean;
+  centeredOnXxlarge?: boolean;
 
-  uncenterOnSmall?: boolean;
-  uncenterOnMedium?: boolean;
-  uncenterOnLarge?: boolean;
-  uncenterOnXlarge?: boolean;
-  uncenterOnXxlarge?: boolean;
+  uncenteredOnSmall?: boolean;
+  uncenteredOnMedium?: boolean;
+  uncenteredOnLarge?: boolean;
+  uncenteredOnXlarge?: boolean;
+  uncenteredOnXxlarge?: boolean;
 };
 
 export class Row extends React.Component<RowProps | VisibilityProps> {}
