@@ -12,7 +12,7 @@ export const propNames = {
   boolean: ['collapse', 'expanded']
 };
 
-const Row = props => {
+const Row = ({ id = null, ...props }) => {
   const className = cx(
     `row${generateClassNames(props, propNames)}`,
     {
@@ -22,7 +22,12 @@ const Row = props => {
     props.className
   );
 
-  return <div className={className}>{props.children}</div>;
+  const attrs = {
+    className,
+    ...(id && { id })
+  };
+
+  return <div {...attrs}>{props.children}</div>;
 };
 
 Row.propTypes = generatePropTypes(propNames);
