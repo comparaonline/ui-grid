@@ -11,13 +11,18 @@ export const propNames = {
   }
 };
 
-const Column = props => {
+const Column = ({ id = null, ...props }) => {
   const className = cx(
     props.className,
     `column${generateClassNames(props, propNames)}`
   );
 
-  return <div className={className}>{props.children}</div>;
+  const attrs = {
+    className,
+    ...(id && { id })
+  };
+
+  return <div {...attrs}>{props.children}</div>;
 };
 
 Column.propTypes = generatePropTypes(propNames);
